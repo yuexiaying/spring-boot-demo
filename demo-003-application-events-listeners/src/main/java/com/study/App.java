@@ -1,7 +1,8 @@
 package com.study;
 
-import org.springframework.boot.SpringApplication;
+import com.study.listener.TestListener2;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 
 /**
  * @author fjding
@@ -11,6 +12,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class App {
 
     public static void main(String[] args) {
-        SpringApplication.run(App.class, args);
+        new SpringApplicationBuilder()
+                // 手动添加监听器
+                .listeners(new TestListener2())
+                .sources(App.class)
+                .run(args);
     }
 }

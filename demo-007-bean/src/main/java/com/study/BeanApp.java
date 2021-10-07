@@ -8,9 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2021/10/7
  */
 @SpringBootApplication
-public class WebApp {
+public class BeanApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(WebApp.class, args);
+        SpringApplication.run(BeanApp.class, args);
     }
 }
