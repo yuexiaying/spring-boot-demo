@@ -1,0 +1,12 @@
+application:
+  version: 1.0.0
+  name: Test App
+
+# 控制banner的打印
+spring:
+  main:
+    banner-mode: console
+  banner:
+    image:
+      height: 10
+      width: 30
