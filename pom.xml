@@ -17,6 +17,12 @@
         <module>demo-005-configuration</module>
         <module>demo-006-web</module>
         <module>demo-007-bean</module>
+        <module>demo-008-aware</module>
+        <module>demo-009-annotation</module>
+        <module>demo-010-event</module>
+        <module>demo-011-resource</module>
+        <module>demo-012-validator</module>
+        <module>demo-013-spel</module>
     </modules>
 
     <!--打包方式-->
@@ -24,7 +30,7 @@
 
     <!--属性-->
     <properties>
-        <demo.version>1.0.0</demo.version>
+        <demo.version>1.0.1</demo.version>
         <java.version>1.8</java.version>
         <spring.boot.version>2.5.2</spring.boot.version>
         <guava.version>29.0-jre</guava.version>
@@ -80,12 +86,15 @@
         <!--编译插件-->
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <target>${java.version}</target>
-                    <source>${java.version}</source>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
                 </configuration>
             </plugin>
         </plugins>

@@ -22,4 +22,5 @@ public abstract class CommandManager {
      */
     @Lookup
     protected abstract Command getCommand();
+
 }

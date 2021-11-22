@@ -1,5 +1,6 @@
 package com.study.common;
 
+import com.study.replace.ClassA;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -24,9 +25,12 @@ public class MyApplicationRunner implements ApplicationRunner {
 
     @Autowired
     private Command command;
+    @Autowired
+    private ClassA classA;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
+        classA.print();
         Object studentFactoryBean = context.getBean("studentFactoryBean");
         System.out.println(studentFactoryBean);
         commandManager.process();

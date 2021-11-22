@@ -42,12 +42,13 @@ public class Config {
     }
 
     /**
+     * 定义可以加载多个原型工厂Bean的设置
      *
      * @return
      */
     @Bean
-    public ServiceLocatorFactoryBean serviceLocatorFactory(){
-        ServiceLocatorFactoryBean bean =  new ServiceLocatorFactoryBean();
+    public ServiceLocatorFactoryBean serviceLocatorFactory() {
+        ServiceLocatorFactoryBean bean = new ServiceLocatorFactoryBean();
         bean.setServiceLocatorInterface(PrototypeFactory.class);
         return bean;
     }

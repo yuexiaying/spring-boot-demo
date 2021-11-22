@@ -22,7 +22,19 @@
 
 web的一些知识，因为目前都是前后端分离，关于前端的内容，不再总结。
 
+#### demo-007-bean
 
+bean的一些知识
+
+#### demo-008-aware
+
+扩展接口、生命周期和FactoryBean的一些知识
+
+#### demo-009-annotation
+
+#### demo-010-event
+
+#### demo-011-resource
 
 
 
