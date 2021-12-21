@@ -9,7 +9,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  * @date 2021/11/27
  */
 @SpringBootApplication
-@EnableAspectJAutoProxy(proxyTargetClass = false)
+@EnableAspectJAutoProxy(proxyTargetClass = true)
 public class AspectApp {
 
     public static void main(String[] args) {

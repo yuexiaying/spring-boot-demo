@@ -1,0 +1,21 @@
+spring:
+  # 数据库配置
+  datasource:
+    url: jdbc:h2:mem:dbtest
+    username: sa
+    password: sa
+    driver-class-name: org.h2.Driver
+    # 程序每次启动时都会对数据库结构进行操作
+    schema: classpath*:db/schema.sql
+    # 程序每次启动时都会对数据库数据进行操作
+    data: classpath*:db/data.sql
+  # h2配置
+  h2:
+    console:
+      # 程序启动时启动控制台
+      enabled: true
+      settings:
+        # 允许远程访问
+        web-allow-others: true
+      # 控制台路径
+      path: /h2

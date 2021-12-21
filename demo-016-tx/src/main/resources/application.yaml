@@ -1,0 +1,11 @@
+spring:
+  # 数据库配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://172.16.16.71:3306/bank-mock?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: "bR1<lZ4!cF4&gO7}"
+  # redis配置
+  redis:
+    host: 172.16.16.71
+    password: 9DWVXN7MhZ1t

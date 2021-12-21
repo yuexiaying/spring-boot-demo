@@ -23,6 +23,8 @@
         <module>demo-011-resource</module>
         <module>demo-012-validator</module>
         <module>demo-013-spel</module>
+        <module>demo-015-aop-api</module>
+        <module>demo-016-tx</module>
     </modules>
 
     <!--打包方式-->

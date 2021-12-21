@@ -1,5 +1,7 @@
 spring:
+  # springboot默认使用cglib代理
   aop:
     proxy-target-class: true
-server:
-  port: 8082
+logging:
+  level:
+    root: info

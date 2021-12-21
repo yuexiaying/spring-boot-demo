@@ -7,20 +7,22 @@ import com.study.domain.Order;
 import com.study.service.CommodityService;
 import com.study.service.GoodServiceImpl;
 import com.study.service.OrderService;
+import com.study.service.OrderServiceImpl;
 import com.study.service.common.CommonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.stereotype.Component;
 
 /**
  * @author fjding
  * @date 2021/11/28
  */
-//@Component
+@Component
 public class MyRunner implements ApplicationRunner {
 
     @Autowired
-    private OrderService orderService;
+    private OrderServiceImpl orderService;
 
     @Autowired
     private CommonService commonService;

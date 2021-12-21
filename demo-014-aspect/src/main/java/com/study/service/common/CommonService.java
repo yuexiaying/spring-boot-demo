@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @SimpleType
-public class CommonService {
+public  class CommonService {
 
     /**
      * 打印

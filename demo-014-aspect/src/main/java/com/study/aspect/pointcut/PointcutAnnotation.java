@@ -1,5 +1,6 @@
 package com.study.aspect.pointcut;
 
+import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
@@ -9,7 +10,7 @@ import org.springframework.stereotype.Component;
  * @date 2021/11/28
  */
 @Component
-//@Aspect
+@Aspect
 public class PointcutAnnotation extends AspectPointcut {
 
     /**
@@ -37,22 +38,24 @@ public class PointcutAnnotation extends AspectPointcut {
     /**
      * 匹配使用注解的类作为参数时
      * <p>
-     * todo 不知道为啥会匹配到AutoConfigurationPackages
+     * 需要指定范围，否则会对所有的bean增强，等调用目标方法时才会执行匹配的通知
      */
     @Pointcut("@args(com.study.annotation.SimpleType)")
     public void argsTest() {
+
     }
 
     /**
      * 匹配目标对象上有指定注解的类
-     * todo 不知道为啥会匹配到AutoConfigurationPackages
+     * 需要指定范围，否则会对所有的bean增强，等调用目标方法时才会执行匹配的通知
      */
     @Pointcut("@target(com.study.annotation.SimpleType)")
     public void targetTest() {
 
     }
 
-    @Before("annotationTest()")
+    // && execution( * com.study.service..*(..))
+    @Before("argsTest() ")
     public void before() {
         System.out.println("before...");
     }
